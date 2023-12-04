@@ -31,6 +31,6 @@ class Item(Agenda, AddParameterTrait):
         super().__init__(data, ico)
 
     def get_xml(self) -> etree.Element:
-        xml = self._create_xml_tag('orderItem', namespace='ofr')
-        self._add_elements(xml, self._elements + ['parameters'], 'ofr')
+        xml = self._create_xml_tag('orderItem', namespace='ord')
+        self._add_elements(xml, self._elements + ['parameters'], 'ord')
         return xml
